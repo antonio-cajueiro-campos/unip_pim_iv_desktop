@@ -13,12 +13,9 @@ internal class ChatService
     public bool IsWriting = false;
     public bool IsChatMode = false;
 
-    public ChatService()
+    public ChatService(RequestService RequestService)
     {
-        Connection = new HubConnectionBuilder()
-            .WithUrl($"https://tsb-portal.herokuapp.com/websocketchat?userId={UserId}")
-            .Build();
-
+        Connection = RequestService.SignalR(UserId);
         StartConnection();
     }
 

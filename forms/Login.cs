@@ -21,5 +21,10 @@ namespace unip_pim_iv_desktop
         {
 
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

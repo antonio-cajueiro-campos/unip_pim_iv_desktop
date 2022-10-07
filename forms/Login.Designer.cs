@@ -33,8 +33,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btn_acessar = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_username = new System.Windows.Forms.Label();
+            this.lbl_password = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -48,16 +48,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(183, 172);
+            this.textBox1.Location = new System.Drawing.Point(183, 181);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
+            this.textBox1.Size = new System.Drawing.Size(252, 23);
             this.textBox1.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(212, 60);
+            this.label1.Location = new System.Drawing.Point(218, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(175, 37);
             this.label1.TabIndex = 2;
@@ -65,9 +65,9 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(158, 234);
+            this.textBox2.Location = new System.Drawing.Point(183, 263);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
+            this.textBox2.Size = new System.Drawing.Size(252, 23);
             this.textBox2.TabIndex = 3;
             // 
             // btn_acessar
@@ -80,31 +80,31 @@
             this.btn_acessar.UseVisualStyleBackColor = true;
             this.btn_acessar.Click += new System.EventHandler(this.btn_acessar_Click);
             // 
-            // label2
+            // lbl_username
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(349, 215);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 15);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "label2";
+            this.lbl_username.AutoSize = true;
+            this.lbl_username.Location = new System.Drawing.Point(183, 163);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(47, 15);
+            this.lbl_username.TabIndex = 5;
+            this.lbl_username.Text = "Usuário";
             // 
-            // label3
+            // lbl_password
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(292, 246);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 15);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "label3";
+            this.lbl_password.AutoSize = true;
+            this.lbl_password.Location = new System.Drawing.Point(183, 245);
+            this.lbl_password.Name = "lbl_password";
+            this.lbl_password.Size = new System.Drawing.Size(39, 15);
+            this.lbl_password.TabIndex = 6;
+            this.lbl_password.Text = "Senha";
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(623, 506);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_password);
+            this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.btn_acessar);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label1);
@@ -112,6 +112,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,7 +125,7 @@
         private Label label1;
         private TextBox textBox2;
         private Button btn_acessar;
-        private Label label2;
-        private Label label3;
+        private Label lbl_username;
+        private Label lbl_password;
     }
 }

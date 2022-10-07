@@ -2,9 +2,12 @@
 using Model = unip_pim_iv_desktop.Models;
 
 namespace unip_pim_iv_desktop.Services;
+
 internal class ChatService
 {
     public HubConnection Connection;
+    public UserService _userService;
+
     public List<Model.Chat> ChatList = new List<Model.Chat>();
     public List<Model.Chat> StartedChatList = new List<Model.Chat>();
     public long SelectedChatId = 0;
@@ -13,9 +16,10 @@ internal class ChatService
     public bool IsWriting = false;
     public bool IsChatMode = false;
 
-    public ChatService(RequestService RequestService)
+    public ChatService(RequestService requestService, UserService userService)
     {
-        Connection = RequestService.SignalR(UserId);
+        _userService = userService;
+        Connection = requestService.SignalR(UserId);
         StartConnection();
     }
 
@@ -119,7 +123,7 @@ internal class ChatService
 
     public void GetUserInfo(Func<long, bool> callback)
     {
-        long userId = 0;
+        var userId = _userService.user.Id;
         callback(userId);
     }
 

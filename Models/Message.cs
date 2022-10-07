@@ -1,4 +1,5 @@
 ﻿namespace unip_pim_iv_desktop.Models;
+
 internal class Message
 {
     public long OwnerId { get; set; }

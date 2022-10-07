@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.Logging;
-using System.Text.Json;
+using Newtonsoft.Json;
 using unip_pim_iv_desktop.Models;
+using System.Net.Http.Headers;
 
 namespace unip_pim_iv_desktop.Services;
 
@@ -9,60 +10,61 @@ internal class RequestService
 {
     private readonly string BASE_URL = "https://tsb-portal.herokuapp.com";
 
-    public async Task<DefaultResponse> GetAsync()
+    public async Task<DefaultResponse> GetAsync(string endpoint)
     {
         try
         {
             var response = new DefaultResponse();
 
             using var client = new HttpClient();
-            var responseServer = await client.GetAsync($"{BASE_URL}");
+            var responseServer = await client.GetAsync($"{BASE_URL}{endpoint}");
 
             responseServer.EnsureSuccessStatusCode();
 
-            var content = JsonSerializer.Deserialize<DefaultResponse>(await responseServer.Content.ReadAsStringAsync());
+            var content = System.Text.Json.JsonSerializer.Deserialize<DefaultResponse>(await responseServer.Content.ReadAsStringAsync());
             if (content != null) return content;
 
             return response;
         }
-        catch (Exception ex)
+        catch (HttpRequestException ex)
         {
-            return new DefaultResponse()
+            return new()
             {
-                Status = 500,
+                Status = ex.StatusCode,
                 Error = true,
                 Message = ex.Message,
-                Data = null
+                Data = ex.Data
             };
         }
     }
 
-    public async Task<DefaultResponse> PostAsync(Dictionary<string, string> values)
+    public async Task<DefaultResponse> PostAsync(string endpoint, object value)
     {
         try
         {
-            var body = new FormUrlEncodedContent(values);
+            var body = UrlEncodeObject(value);
 
             var response = new DefaultResponse();
 
             using var client = new HttpClient();
-            var responseServer = await client.PostAsync($"{BASE_URL}", body);
+            var responseServer = await client.PostAsync($"{BASE_URL}{endpoint}", body);
 
             responseServer.EnsureSuccessStatusCode();
 
-            var content = JsonSerializer.Deserialize<DefaultResponse>(await responseServer.Content.ReadAsStringAsync());
+            var content = System.Text.Json.JsonSerializer.Deserialize<DefaultResponse>(await responseServer.Content.ReadAsStringAsync());
             if (content != null) return content;
 
             return response;
         }
-        catch (Exception ex)
+        catch (HttpRequestException ex)
         {
-            return new DefaultResponse()
+
+            return new()
             {
-                Status = 500,
+                Status = ex.StatusCode,
                 Error = true,
                 Message = ex.Message,
-                Data = null
+                Data = ex.Data
             };
         }
     }
@@ -78,5 +80,14 @@ internal class RequestService
                 logging.AddFilter("Microsoft.AspNetCore.Http.Connections", LogLevel.Warning);
             })
             .Build();
+    }
+
+    private static ByteArrayContent UrlEncodeObject(object data)
+    {
+        var myContent = JsonConvert.SerializeObject(data);
+        var buffer = System.Text.Encoding.UTF8.GetBytes(myContent);
+        var byteContent = new ByteArrayContent(buffer);
+        byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+        return byteContent;
     }
 }

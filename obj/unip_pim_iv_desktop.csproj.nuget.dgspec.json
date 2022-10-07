@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\antonio\\unip\\unip_pim_iv_desktop\\unip_pim_iv_desktop\\unip_pim_iv_desktop.csproj": {}
+    "E:\\antonio\\unip\\unip_pim_iv_desktop\\unip_pim_iv_desktop.csproj": {}
   },
   "projects": {
-    "E:\\antonio\\unip\\unip_pim_iv_desktop\\unip_pim_iv_desktop\\unip_pim_iv_desktop.csproj": {
+    "E:\\antonio\\unip\\unip_pim_iv_desktop\\unip_pim_iv_desktop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\antonio\\unip\\unip_pim_iv_desktop\\unip_pim_iv_desktop\\unip_pim_iv_desktop.csproj",
+        "projectUniqueName": "E:\\antonio\\unip\\unip_pim_iv_desktop\\unip_pim_iv_desktop.csproj",
         "projectName": "unip_pim_iv_desktop",
-        "projectPath": "E:\\antonio\\unip\\unip_pim_iv_desktop\\unip_pim_iv_desktop\\unip_pim_iv_desktop.csproj",
+        "projectPath": "E:\\antonio\\unip\\unip_pim_iv_desktop\\unip_pim_iv_desktop.csproj",
         "packagesPath": "E:\\.NuGet",
-        "outputPath": "E:\\antonio\\unip\\unip_pim_iv_desktop\\unip_pim_iv_desktop\\obj\\",
+        "outputPath": "E:\\antonio\\unip\\unip_pim_iv_desktop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Akky\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows7.0"
+          "net6.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -40,13 +40,20 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Microsoft.AspNetCore.SignalR.Client": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -58,7 +65,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

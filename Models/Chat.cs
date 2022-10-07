@@ -3,7 +3,7 @@
 internal class Chat
 {
     public long ChatId { get; set; }
-    public string Type { get; set; }
-    public UserHub[] UserList { get; set; }
-    public Message[] MessagesList { get; set; }
+    public string? Type { get; set; }
+    public List<UserHub> UserList { get; set; }
+    public List<Message> MessagesList { get; set; }
 }

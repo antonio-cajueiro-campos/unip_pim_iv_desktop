@@ -79,9 +79,24 @@ namespace Login_e_Registro_Sistema
         private async void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
-            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            
+        }
+
+        private async void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
             {
+                if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value == null)
+                {
+                    return;
+                }
+
                 var userId = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+                if (userId == "0")
+                {
+                    return;
+                }
 
                 var apoliceResponse = await _userServices.GetApoliceById(userId);
 
@@ -92,13 +107,17 @@ namespace Login_e_Registro_Sistema
                 var formApolice = new frmApolice(_userServices, apolice, currentClient);
 
                 formApolice.Show();
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
 
             }
+            
         }
 
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_SelectionChanged_1(object sender, EventArgs e)
         {
-          
+            dataGridView1.ClearSelection();
         }
     }
 }

@@ -47,31 +47,31 @@ namespace Login_e_Registro_Sistema
                 Password = txtSenha.Text
             };
 
-            var test = await _userServices.LoginUser(credential);
+            var outputLogin = await _userServices.LoginUser(credential);
 
-            if (((int?)test.Status) == 200)
+            if (outputLogin.Status == 200)
             {
-                Console.WriteLine(test.Data);
-
                 MessageBox.Show("Seja bem vindo");
-
-                //para fechar a Janela anterior
+                txtNomeUsuario.Text = "";
+                txtSenha.Text = "";
                 this.Visible = false;
+                frmHome Home1 = new frmHome(_userServices);
+                Home1.Show();
+
             }
             else
             {
                 MessageBox.Show("Usuario ou Senha invalida!");
+                txtNomeUsuario.Text = "";
+                txtSenha.Text = "";
             }
-
-            txtNomeUsuario.Text = ""; 
-            txtSenha.Text = "";
-
-            frmHome Home1 = new frmHome(_userServices);
-            Home1.Show();
         }
 
         private void cadastrarFuncionario_Click(object sender, EventArgs e)
         {
+            txtNomeUsuario.Text = "";
+            txtSenha.Text = "";
+            this.Visible = false;
             frmRegistro Registro = new frmRegistro(_userServices);
             Registro.Show();
         }

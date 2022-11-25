@@ -67,10 +67,10 @@ namespace Login_e_Registro_Sistema
                 currentBtn = (IconButton)senderBtn;
                 currentBtn.BackColor = Color.FromArgb(0, 38, 0);
                 currentBtn.ForeColor = color;
-                currentBtn.TextAlign = ContentAlignment.MiddleCenter;
+                currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.IconColor = color;
-                currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
-                currentBtn.ImageAlign = ContentAlignment.MiddleRight;
+                currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+                currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
 
                 //Left Border button
                 leftBorderBtn.BackColor = color;
@@ -158,5 +158,9 @@ namespace Login_e_Registro_Sistema
             leftBorderBtn.Visible = false;
         }
 
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

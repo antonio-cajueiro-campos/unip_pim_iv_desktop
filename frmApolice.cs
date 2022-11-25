@@ -24,23 +24,23 @@ namespace Login_e_Registro_Sistema
 
             InitializeComponent();
             
-            textBoxApoNome.Text = clientInfo.User.Name;
-            textBoxApoDoc.Text = clientInfo.User.Document;
-            textBoxNCasa.Text = clientInfo.Endereco.Numero;
-            textBoxCEP.Text = clientInfo.Endereco.Cep;
-            textBoxComplemento.Text = clientInfo.Endereco.Complemento;
+            textBoxApoNome.Text = clientInfo.User?.Name;
+            textBoxApoDoc.Text = clientInfo.User?.Document;
+            textBoxNCasa.Text = clientInfo.Endereco?.Numero;
+            textBoxCEP.Text = clientInfo.Endereco?.Cep;
+            textBoxComplemento.Text = clientInfo.Endereco?.Complemento;
             textBoxTell.Text = clientInfo.Telefone;
 
-            textBoxIRE.Text = apolice.Sinistros["IRE"].ToString();
-            textBoxRO.Text = apolice.Sinistros["RO"].ToString();
-            textBoxDE.Text = apolice.Sinistros["DE"].ToString();
-            textBoxRCF.Text = apolice.Sinistros["RCF"].ToString();
-            textBoxVGC.Text = apolice.Sinistros["VGC"].ToString();
-            textBoxPP.Text = apolice.Sinistros["PP"].ToString();
+            textBoxIRE.Text = apolice?.Sinistros["IRE"].ToString();
+            textBoxRO.Text = apolice?.Sinistros["RO"].ToString();
+            textBoxDE.Text = apolice?.Sinistros["DE"].ToString();
+            textBoxRCF.Text = apolice?.Sinistros["RCF"].ToString();
+            textBoxVGC.Text = apolice?.Sinistros["VGC"].ToString();
+            textBoxPP.Text = apolice?.Sinistros["PP"].ToString();
 
-            textBoxDateVi.Text = apolice.Vigencia.ToShortDateString();
-            textBoxDateEm.Text = apolice.Emissao.ToShortDateString();
-            textBoxVC.Text = apolice.ValorCobertura.ToString();
+            textBoxDateVi.Text = apolice?.Vigencia.ToShortDateString();
+            textBoxDateEm.Text = apolice?.Emissao.ToShortDateString();
+            textBoxVC.Text = apolice?.ValorCobertura.ToString();
         }
 
         private async void button3_Click(object sender, EventArgs e)

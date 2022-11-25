@@ -25,6 +25,17 @@ namespace Login_e_Registro_Sistema
 
         private async void buttonCadastrar_Click(object sender, EventArgs e)
         {
+            if (txtNomeCompleto.Text == "" || 
+                txtNomeUsuario.Text == "" ||
+                txtSenha.Text == "" ||
+                txtConfirmacaoSenha.Text == "" ||
+                txtDocumento.Text == "")
+            {
+                MessageBox.Show("Preencha todos os campos");
+                return;
+            }
+
+
             var frm = await Registrar(
                 txtNomeCompleto.Text,
                 txtNomeUsuario.Text,
@@ -38,7 +49,6 @@ namespace Login_e_Registro_Sistema
             txtConfirmacaoSenha.Text = "";
             txtNomeCompleto.Text = "";
             txtDocumento.Text = "";
-
         }
 
         private async Task<bool> Registrar(string name, 
@@ -66,7 +76,7 @@ namespace Login_e_Registro_Sistema
             }
             else
             {
-                MessageBox.Show("Erro!");
+                MessageBox.Show("Erro ao cadastrar, verifique os campos!");
             }
 
             return true;
@@ -103,6 +113,16 @@ namespace Login_e_Registro_Sistema
 
         private void rLogin_Click(object sender, EventArgs e)
         {
+            frmLogin frm2 = new frmLogin();
+            frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
+            frm2.Show();
+
+            this.Close();
+        }
+
+        private void frm2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

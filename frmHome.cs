@@ -25,19 +25,14 @@ namespace Login_e_Registro_Sistema
         private IconButton currentBtn;
         private readonly Panel leftBorderBtn;
         private Form currentChildForm;
+
         public readonly IUserServices _userServices;
-        public readonly IRequestServices _requestService;
 
         //Constructor
-        public frmHome()
+        public frmHome(IUserServices userServices)
         {
-            _requestService = new RequestService();
-            _userServices = new UserService(_requestService);
-            
-            var loginfrm = new frmLogin(_userServices);
-            loginfrm.TopMost = true;
-            loginfrm.Show();
 
+            _userServices = userServices;
 
             InitializeComponent();
 
@@ -136,10 +131,11 @@ namespace Login_e_Registro_Sistema
             if (dialogResult == DialogResult.Yes)
             {
                 {
-                    frmLogin frm2 = new frmLogin(_userServices);
+                    frmLogin frm2 = new frmLogin();
                     frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
                     frm2.Show();
-                    this.Hide();
+
+                    this.Close();
                 }
             }
             else if (dialogResult == DialogResult.No)

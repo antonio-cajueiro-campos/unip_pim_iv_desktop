@@ -47,10 +47,13 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtNomeUsuario = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.SuspendLayout();
             // 
             // txtConfirmacaoSenha
             // 
+            this.txtConfirmacaoSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtConfirmacaoSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtConfirmacaoSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtConfirmacaoSenha.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -62,6 +65,7 @@
             // 
             // txtDocumento
             // 
+            this.txtDocumento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtDocumento.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDocumento.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -73,6 +77,7 @@
             // 
             // nomeUsuario
             // 
+            this.nomeUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nomeUsuario.AutoSize = true;
             this.nomeUsuario.Location = new System.Drawing.Point(34, 103);
             this.nomeUsuario.Name = "nomeUsuario";
@@ -82,6 +87,7 @@
             // 
             // senha
             // 
+            this.senha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.senha.AutoSize = true;
             this.senha.Location = new System.Drawing.Point(36, 171);
             this.senha.Name = "senha";
@@ -91,6 +97,7 @@
             // 
             // confirmacaoSenha
             // 
+            this.confirmacaoSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.confirmacaoSenha.AutoSize = true;
             this.confirmacaoSenha.Location = new System.Drawing.Point(36, 239);
             this.confirmacaoSenha.Name = "confirmacaoSenha";
@@ -100,6 +107,7 @@
             // 
             // nomeCompleto
             // 
+            this.nomeCompleto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nomeCompleto.AutoSize = true;
             this.nomeCompleto.Location = new System.Drawing.Point(320, 103);
             this.nomeCompleto.Name = "nomeCompleto";
@@ -109,6 +117,7 @@
             // 
             // documento
             // 
+            this.documento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.documento.AutoSize = true;
             this.documento.Location = new System.Drawing.Point(320, 171);
             this.documento.Name = "documento";
@@ -118,6 +127,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.SeaGreen;
@@ -129,6 +139,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.SeaGreen;
@@ -140,6 +151,7 @@
             // 
             // buttonCadastrar
             // 
+            this.buttonCadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonCadastrar.BackColor = System.Drawing.Color.SeaGreen;
             this.buttonCadastrar.FlatAppearance.BorderSize = 0;
             this.buttonCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -154,6 +166,7 @@
             // 
             // buttonLimparCadastrar
             // 
+            this.buttonLimparCadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonLimparCadastrar.BackColor = System.Drawing.Color.White;
             this.buttonLimparCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonLimparCadastrar.ForeColor = System.Drawing.Color.SeaGreen;
@@ -166,6 +179,7 @@
             // 
             // checkBoxMostrarSenha
             // 
+            this.checkBoxMostrarSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxMostrarSenha.AutoSize = true;
             this.checkBoxMostrarSenha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.checkBoxMostrarSenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -178,6 +192,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(60, 355);
             this.label3.Name = "label3";
@@ -187,6 +202,7 @@
             // 
             // rLogin
             // 
+            this.rLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rLogin.AutoSize = true;
             this.rLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rLogin.ForeColor = System.Drawing.Color.SeaGreen;
@@ -198,6 +214,7 @@
             // 
             // txtNomeCompleto
             // 
+            this.txtNomeCompleto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNomeCompleto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtNomeCompleto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNomeCompleto.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -209,6 +226,7 @@
             // 
             // txtSenha
             // 
+            this.txtSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSenha.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -220,6 +238,7 @@
             // 
             // txtNomeUsuario
             // 
+            this.txtNomeUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNomeUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtNomeUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNomeUsuario.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -234,6 +253,17 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 25;
+            this.guna2Elipse1.TargetControl = this;
             // 
             // frmRegistro
             // 
@@ -288,5 +318,7 @@
         private TextBox txtSenha;
         private TextBox txtNomeUsuario;
         private ContextMenuStrip contextMenuStrip1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

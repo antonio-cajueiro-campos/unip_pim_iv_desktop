@@ -186,7 +186,7 @@
             this.guna2ControlBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.SeaGreen;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(687, 0);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(686, 0);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox2.TabIndex = 35;
@@ -200,7 +200,7 @@
             this.guna2ControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.SeaGreen;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(733, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(731, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 34;

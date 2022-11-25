@@ -57,15 +57,9 @@ namespace Login_e_Registro_Sistema
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void frmClientList_Load(object sender, EventArgs e)
         {

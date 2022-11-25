@@ -27,11 +27,18 @@ namespace Login_e_Registro_Sistema
         {
             var frm = await Registrar(
                 txtNomeCompleto.Text,
-                txtNomeUsuario.Text, 
+                txtNomeUsuario.Text,
                 txtSenha.Text,
                 txtConfirmacaoSenha.Text,
                 txtDocumento.Text
                 );
+
+            txtNomeUsuario.Text = "";
+            txtSenha.Text = "";
+            txtConfirmacaoSenha.Text = "";
+            txtNomeCompleto.Text = "";
+            txtDocumento.Text = "";
+
         }
 
         private async Task<bool> Registrar(string name, 
@@ -68,6 +75,34 @@ namespace Login_e_Registro_Sistema
         private void txtNomeUsuario_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBoxMostrarSenha_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxMostrarSenha.Checked)
+            {
+                txtSenha.PasswordChar = '\0';
+                txtConfirmacaoSenha.PasswordChar = '\0';
+            }
+            else
+            {
+                txtSenha.PasswordChar = '*';
+                txtConfirmacaoSenha.PasswordChar = '*';
+            }
+        }
+
+        private void buttonLimparCadastrar_Click(object sender, EventArgs e)
+        {
+            txtNomeUsuario.Text = "";
+            txtSenha.Text = "";
+            txtConfirmacaoSenha.Text = "";
+            txtNomeCompleto.Text = "";
+            txtDocumento.Text = "";
+            txtNomeUsuario.Focus();
+        }
+
+        private void rLogin_Click(object sender, EventArgs e)
+        {
         }
     }
 }

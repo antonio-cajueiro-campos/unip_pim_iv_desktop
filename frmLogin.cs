@@ -63,12 +63,11 @@ namespace Login_e_Registro_Sistema
                 MessageBox.Show("Usuario ou Senha invalida!");
             }
 
+            txtNomeUsuario.Text = ""; 
+            txtSenha.Text = "";
 
             frmHome Home1 = new frmHome(_userServices);
             Home1.Show();
-            
-            ////para fechar a Janela anterior
-            //this.Visible =  false;
         }
 
         private void cadastrarFuncionario_Click(object sender, EventArgs e)
@@ -80,6 +79,30 @@ namespace Login_e_Registro_Sistema
         private void frmLogin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void checkBoxMostrarSenha_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxMostrarSenha.Checked)
+            {
+                txtSenha.PasswordChar = '\0';
+            }
+            else
+            {
+                txtSenha.PasswordChar = '*';
+            }
+        }
+
+        private void txtNomeUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLimparLogin_Click(object sender, EventArgs e)
+        {
+            txtNomeUsuario.Text = "";
+            txtSenha.Text = "";
+            txtNomeUsuario.Focus();
         }
     }
 }

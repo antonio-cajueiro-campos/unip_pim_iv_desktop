@@ -49,6 +49,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.SuspendLayout();
             // 
             // txtConfirmacaoSenha
@@ -56,11 +57,11 @@
             this.txtConfirmacaoSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtConfirmacaoSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtConfirmacaoSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtConfirmacaoSenha.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtConfirmacaoSenha.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtConfirmacaoSenha.Location = new System.Drawing.Point(36, 259);
-            this.txtConfirmacaoSenha.Multiline = true;
             this.txtConfirmacaoSenha.Name = "txtConfirmacaoSenha";
-            this.txtConfirmacaoSenha.Size = new System.Drawing.Size(216, 28);
+            this.txtConfirmacaoSenha.PasswordChar = '*';
+            this.txtConfirmacaoSenha.Size = new System.Drawing.Size(216, 27);
             this.txtConfirmacaoSenha.TabIndex = 6;
             // 
             // txtDocumento
@@ -68,11 +69,10 @@
             this.txtDocumento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDocumento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtDocumento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDocumento.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtDocumento.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtDocumento.Location = new System.Drawing.Point(320, 191);
-            this.txtDocumento.Multiline = true;
             this.txtDocumento.Name = "txtDocumento";
-            this.txtDocumento.Size = new System.Drawing.Size(216, 28);
+            this.txtDocumento.Size = new System.Drawing.Size(216, 27);
             this.txtDocumento.TabIndex = 21;
             // 
             // nomeUsuario
@@ -176,6 +176,7 @@
             this.buttonLimparCadastrar.TabIndex = 35;
             this.buttonLimparCadastrar.Text = "LIMPAR";
             this.buttonLimparCadastrar.UseVisualStyleBackColor = false;
+            this.buttonLimparCadastrar.Click += new System.EventHandler(this.buttonLimparCadastrar_Click);
             // 
             // checkBoxMostrarSenha
             // 
@@ -189,6 +190,7 @@
             this.checkBoxMostrarSenha.TabIndex = 36;
             this.checkBoxMostrarSenha.Text = "Mostrar Senha";
             this.checkBoxMostrarSenha.UseVisualStyleBackColor = true;
+            this.checkBoxMostrarSenha.CheckedChanged += new System.EventHandler(this.checkBoxMostrarSenha_CheckedChanged);
             // 
             // label3
             // 
@@ -211,17 +213,17 @@
             this.rLogin.Size = new System.Drawing.Size(122, 17);
             this.rLogin.TabIndex = 38;
             this.rLogin.Text = "Volte para o Login";
+            this.rLogin.Click += new System.EventHandler(this.rLogin_Click);
             // 
             // txtNomeCompleto
             // 
             this.txtNomeCompleto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNomeCompleto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtNomeCompleto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNomeCompleto.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNomeCompleto.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtNomeCompleto.Location = new System.Drawing.Point(320, 123);
-            this.txtNomeCompleto.Multiline = true;
             this.txtNomeCompleto.Name = "txtNomeCompleto";
-            this.txtNomeCompleto.Size = new System.Drawing.Size(216, 28);
+            this.txtNomeCompleto.Size = new System.Drawing.Size(216, 27);
             this.txtNomeCompleto.TabIndex = 39;
             // 
             // txtSenha
@@ -229,11 +231,11 @@
             this.txtSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSenha.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSenha.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSenha.Location = new System.Drawing.Point(36, 191);
-            this.txtSenha.Multiline = true;
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(216, 28);
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.Size = new System.Drawing.Size(216, 27);
             this.txtSenha.TabIndex = 40;
             // 
             // txtNomeUsuario
@@ -241,11 +243,10 @@
             this.txtNomeUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNomeUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtNomeUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNomeUsuario.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNomeUsuario.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtNomeUsuario.Location = new System.Drawing.Point(36, 123);
-            this.txtNomeUsuario.Multiline = true;
             this.txtNomeUsuario.Name = "txtNomeUsuario";
-            this.txtNomeUsuario.Size = new System.Drawing.Size(216, 28);
+            this.txtNomeUsuario.Size = new System.Drawing.Size(216, 27);
             this.txtNomeUsuario.TabIndex = 41;
             this.txtNomeUsuario.TextChanged += new System.EventHandler(this.txtNomeUsuario_TextChanged);
             // 
@@ -265,12 +266,27 @@
             this.guna2Elipse1.BorderRadius = 25;
             this.guna2Elipse1.TargetControl = this;
             // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.Animated = true;
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.SeaGreen;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(545, 1);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.guna2ControlBox1.TabIndex = 42;
+            // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(592, 458);
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.txtNomeUsuario);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtNomeCompleto);
@@ -320,5 +336,6 @@
         private ContextMenuStrip contextMenuStrip1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

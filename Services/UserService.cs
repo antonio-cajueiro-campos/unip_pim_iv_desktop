@@ -22,6 +22,26 @@ public class UserService : IUserServices
         return response;
     }
 
+    public async Task<DefaultResponse<string>> ActiveInsurance(long id, string tipo)
+    {
+        var data = new
+        {
+            id,
+            tipo
+        };
+
+        var response = await _requestService.PostAsync<string>("/funcionario/activeInsurance", data);
+
+        return response;
+    }
+
+    public async Task<DefaultResponse<ApoliceCliente>> GetApoliceById(string id)
+    {
+        var response = await _requestService.GetAsync<ApoliceCliente>($"/insurance/getApolice/{id}");
+
+        return response;
+    }
+
     public async Task<DefaultResponse<GetUserInfos>> GetUserInfos()
     {
         var response = await _requestService.GetAsync<GetUserInfos>("/user/infos");

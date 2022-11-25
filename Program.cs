@@ -1,17 +1,37 @@
-namespace unip_pim_iv_desktop
+using Login_e_Registro_Sistema.Services;
+using Login_e_Registro_Sistema.Services.Interfaces;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using System.ComponentModel.Design;
+
+namespace Login_e_Registro_Sistema
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Init());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+
+            var host = CreateHostBuilder().Build();
+            ServiceProvider = host.Services;
+
+            var mainForm = new frmHome();
+
+            mainForm.IsMdiContainer = true;
+
+            Application.Run(mainForm);
+        }
+        public static IServiceProvider? ServiceProvider { get; private set; }
+        static IHostBuilder CreateHostBuilder()
+        {
+            return Host.CreateDefaultBuilder()
+                .ConfigureServices((context, services) => {
+                    services.AddScoped<IRequestServices, RequestService>();
+                    services.AddScoped<IUserServices, UserService>();
+                    services.AddTransient<frmHome>();
+                });
         }
     }
 }

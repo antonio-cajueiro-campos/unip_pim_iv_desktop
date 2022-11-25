@@ -68,6 +68,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(12, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 15);
@@ -78,6 +79,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(12, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 15);
@@ -88,6 +90,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(203, 104);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(93, 15);
@@ -98,6 +101,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(12, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 15);
@@ -108,6 +112,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(417, 104);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(28, 15);
@@ -118,6 +123,7 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(12, 104);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 15);
@@ -127,6 +133,8 @@
             // textBoxApoNome
             // 
             this.textBoxApoNome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxApoNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBoxApoNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxApoNome.Location = new System.Drawing.Point(12, 34);
             this.textBoxApoNome.Name = "textBoxApoNome";
             this.textBoxApoNome.ReadOnly = true;
@@ -137,6 +145,8 @@
             // textBoxApoDoc
             // 
             this.textBoxApoDoc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxApoDoc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBoxApoDoc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxApoDoc.Location = new System.Drawing.Point(12, 78);
             this.textBoxApoDoc.Name = "textBoxApoDoc";
             this.textBoxApoDoc.ReadOnly = true;
@@ -147,6 +157,8 @@
             // textBoxTell
             // 
             this.textBoxTell.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxTell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBoxTell.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxTell.Location = new System.Drawing.Point(203, 122);
             this.textBoxTell.Name = "textBoxTell";
             this.textBoxTell.ReadOnly = true;
@@ -157,6 +169,8 @@
             // textBoxComplemento
             // 
             this.textBoxComplemento.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxComplemento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBoxComplemento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxComplemento.Location = new System.Drawing.Point(12, 166);
             this.textBoxComplemento.Name = "textBoxComplemento";
             this.textBoxComplemento.ReadOnly = true;
@@ -167,6 +181,8 @@
             // textBoxCEP
             // 
             this.textBoxCEP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxCEP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBoxCEP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxCEP.Location = new System.Drawing.Point(417, 122);
             this.textBoxCEP.Name = "textBoxCEP";
             this.textBoxCEP.ReadOnly = true;
@@ -177,6 +193,8 @@
             // textBoxNCasa
             // 
             this.textBoxNCasa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxNCasa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBoxNCasa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxNCasa.Location = new System.Drawing.Point(12, 122);
             this.textBoxNCasa.Name = "textBoxNCasa";
             this.textBoxNCasa.ReadOnly = true;
@@ -188,6 +206,7 @@
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(234, 271);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(97, 15);
@@ -197,17 +216,24 @@
             // button3
             // 
             this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button3.Location = new System.Drawing.Point(12, 486);
+            this.button3.BackColor = System.Drawing.Color.SeaGreen;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI Semibold", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(12, 474);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(524, 43);
+            this.button3.Size = new System.Drawing.Size(524, 55);
             this.button3.TabIndex = 18;
             this.button3.Text = "Acionar Sinistro";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBoxRCF
             // 
             this.textBoxRCF.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxRCF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBoxRCF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRCF.Location = new System.Drawing.Point(234, 348);
             this.textBoxRCF.Name = "textBoxRCF";
             this.textBoxRCF.ReadOnly = true;
@@ -218,6 +244,8 @@
             // textBoxDE
             // 
             this.textBoxDE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxDE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBoxDE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxDE.Location = new System.Drawing.Point(234, 377);
             this.textBoxDE.Name = "textBoxDE";
             this.textBoxDE.ReadOnly = true;
@@ -227,6 +255,8 @@
             // textBoxRO
             // 
             this.textBoxRO.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxRO.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBoxRO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxRO.Location = new System.Drawing.Point(234, 406);
             this.textBoxRO.Name = "textBoxRO";
             this.textBoxRO.ReadOnly = true;
@@ -237,6 +267,7 @@
             // 
             this.radioButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton1.AutoSize = true;
+            this.radioButton1.ForeColor = System.Drawing.Color.White;
             this.radioButton1.Location = new System.Drawing.Point(4, 139);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(60, 19);
@@ -250,6 +281,7 @@
             // 
             this.radioButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton2.AutoSize = true;
+            this.radioButton2.ForeColor = System.Drawing.Color.White;
             this.radioButton2.Location = new System.Drawing.Point(4, 110);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(105, 19);
@@ -263,6 +295,7 @@
             // 
             this.radioButton3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton3.AutoSize = true;
+            this.radioButton3.ForeColor = System.Drawing.Color.White;
             this.radioButton3.Location = new System.Drawing.Point(4, 81);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(181, 19);
@@ -275,6 +308,8 @@
             // textBoxVGC
             // 
             this.textBoxVGC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxVGC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBoxVGC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxVGC.Location = new System.Drawing.Point(234, 319);
             this.textBoxVGC.Name = "textBoxVGC";
             this.textBoxVGC.ReadOnly = true;
@@ -284,6 +319,8 @@
             // textBoxPP
             // 
             this.textBoxPP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxPP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBoxPP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxPP.Location = new System.Drawing.Point(234, 289);
             this.textBoxPP.Name = "textBoxPP";
             this.textBoxPP.ReadOnly = true;
@@ -293,6 +330,8 @@
             // textBoxIRE
             // 
             this.textBoxIRE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxIRE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBoxIRE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxIRE.Location = new System.Drawing.Point(234, 435);
             this.textBoxIRE.Name = "textBoxIRE";
             this.textBoxIRE.ReadOnly = true;
@@ -303,6 +342,7 @@
             // 
             this.radioButton4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton4.AutoSize = true;
+            this.radioButton4.ForeColor = System.Drawing.Color.White;
             this.radioButton4.Location = new System.Drawing.Point(4, 52);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(170, 19);
@@ -316,6 +356,7 @@
             // 
             this.radioButton5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton5.AutoSize = true;
+            this.radioButton5.ForeColor = System.Drawing.Color.White;
             this.radioButton5.Location = new System.Drawing.Point(4, 22);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(188, 19);
@@ -329,6 +370,7 @@
             // 
             this.radioButton6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButton6.AutoSize = true;
+            this.radioButton6.ForeColor = System.Drawing.Color.White;
             this.radioButton6.Location = new System.Drawing.Point(4, 168);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(159, 19);
@@ -341,6 +383,8 @@
             // textBoxDateVi
             // 
             this.textBoxDateVi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxDateVi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBoxDateVi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxDateVi.Location = new System.Drawing.Point(12, 290);
             this.textBoxDateVi.Name = "textBoxDateVi";
             this.textBoxDateVi.ReadOnly = true;
@@ -350,6 +394,8 @@
             // textBoxDateEm
             // 
             this.textBoxDateEm.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxDateEm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBoxDateEm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxDateEm.Location = new System.Drawing.Point(12, 338);
             this.textBoxDateEm.Name = "textBoxDateEm";
             this.textBoxDateEm.ReadOnly = true;
@@ -360,6 +406,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(12, 320);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 15);
@@ -369,6 +416,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(12, 271);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(95, 15);
@@ -378,6 +426,8 @@
             // textBoxVC
             // 
             this.textBoxVC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxVC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
+            this.textBoxVC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBoxVC.Location = new System.Drawing.Point(12, 382);
             this.textBoxVC.Name = "textBoxVC";
             this.textBoxVC.ReadOnly = true;
@@ -387,6 +437,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(12, 364);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(105, 15);
@@ -402,6 +453,7 @@
             this.sinistrosGroup.Controls.Add(this.radioButton4);
             this.sinistrosGroup.Controls.Add(this.radioButton6);
             this.sinistrosGroup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sinistrosGroup.ForeColor = System.Drawing.Color.White;
             this.sinistrosGroup.Location = new System.Drawing.Point(341, 271);
             this.sinistrosGroup.Name = "sinistrosGroup";
             this.sinistrosGroup.Size = new System.Drawing.Size(199, 197);
@@ -445,6 +497,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmApolice";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Apolice";
             this.Load += new System.EventHandler(this.frmApolice_Load);
             this.sinistrosGroup.ResumeLayout(false);

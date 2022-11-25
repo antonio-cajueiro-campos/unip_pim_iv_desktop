@@ -17,14 +17,34 @@ namespace Login_e_Registro_Sistema
             InitializeComponent();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            this.Hora.Text = DateTime.Now.ToString("HH:mm:ss");
+
         }
 
-        private void timer2_Tick(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
-            this.Data.Text = DateTime.Now.ToString("dd/MM/yyyy");
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.label3.Text = DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void timer2_Tick_1(object sender, EventArgs e)
+        {
+            this.label4.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

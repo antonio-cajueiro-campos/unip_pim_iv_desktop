@@ -17,9 +17,9 @@ namespace Login_e_Registro_Sistema
             var host = CreateHostBuilder().Build();
             ServiceProvider = host.Services;
 
-            var mainForm = new frmHome();
+            var mainForm = new frmLogin();
 
-            mainForm.IsMdiContainer = true;
+            //mainForm.IsMdiContainer = true;
 
             Application.Run(mainForm);
         }
@@ -30,7 +30,7 @@ namespace Login_e_Registro_Sistema
                 .ConfigureServices((context, services) => {
                     services.AddScoped<IRequestServices, RequestService>();
                     services.AddScoped<IUserServices, UserService>();
-                    services.AddTransient<frmHome>();
+                    services.AddTransient<frmLogin>();
                 });
         }
     }

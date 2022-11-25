@@ -1,4 +1,5 @@
 ﻿using Login_e_Registro_Sistema.Models;
+using Login_e_Registro_Sistema.Services;
 using Login_e_Registro_Sistema.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -19,9 +20,12 @@ namespace Login_e_Registro_Sistema
     public partial class frmLogin : Form
     {
         public readonly IUserServices _userServices;
-        public frmLogin(IUserServices userServices)
+        public readonly IRequestServices _requestService;
+        public frmLogin()
         {
-            _userServices = userServices;
+            _requestService = new RequestService();
+            _userServices = new UserService(_requestService);
+
             InitializeComponent();
         }
 
@@ -59,18 +63,46 @@ namespace Login_e_Registro_Sistema
                 MessageBox.Show("Usuario ou Senha invalida!");
             }
 
+            txtNomeUsuario.Text = ""; 
+            txtSenha.Text = "";
 
-            ///frmHome Home1 = new frmHome();
-            ///Home1.Show();
-            ///
-            /////para fechar a Janela anterior
-            ///this.Visible =  false;
+            frmHome Home1 = new frmHome(_userServices);
+            Home1.Show();
         }
 
         private void cadastrarFuncionario_Click(object sender, EventArgs e)
         {
             frmRegistro Registro = new frmRegistro(_userServices);
             Registro.Show();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxMostrarSenha_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxMostrarSenha.Checked)
+            {
+                txtSenha.PasswordChar = '\0';
+            }
+            else
+            {
+                txtSenha.PasswordChar = '*';
+            }
+        }
+
+        private void txtNomeUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonLimparLogin_Click(object sender, EventArgs e)
+        {
+            txtNomeUsuario.Text = "";
+            txtSenha.Text = "";
+            txtNomeUsuario.Focus();
         }
     }
 }

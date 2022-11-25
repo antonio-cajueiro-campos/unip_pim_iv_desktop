@@ -57,15 +57,9 @@ namespace Login_e_Registro_Sistema
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void frmClientList_Load(object sender, EventArgs e)
         {
@@ -87,12 +81,9 @@ namespace Login_e_Registro_Sistema
 
             if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
-                MessageBox.Show(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-
                 var userId = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 
                 var apoliceResponse = await _userServices.GetApoliceById(userId);
-                // chamar o form de infos, dai eu passo o _clientInfos, e o apolice
 
                 var apolice = apoliceResponse.Data;
 

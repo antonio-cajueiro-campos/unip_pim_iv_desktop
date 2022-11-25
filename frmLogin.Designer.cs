@@ -81,6 +81,7 @@
             this.buttonLimparLogin.TabIndex = 29;
             this.buttonLimparLogin.Text = "LIMPAR";
             this.buttonLimparLogin.UseVisualStyleBackColor = false;
+            this.buttonLimparLogin.Click += new System.EventHandler(this.buttonLimparLogin_Click);
             // 
             // buttonLogar
             // 
@@ -109,17 +110,18 @@
             this.checkBoxMostrarSenha.TabIndex = 27;
             this.checkBoxMostrarSenha.Text = "Mostrar Senha";
             this.checkBoxMostrarSenha.UseVisualStyleBackColor = true;
+            this.checkBoxMostrarSenha.CheckedChanged += new System.EventHandler(this.checkBoxMostrarSenha_CheckedChanged);
             // 
             // txtSenha
             // 
             this.txtSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSenha.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSenha.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSenha.Location = new System.Drawing.Point(49, 162);
-            this.txtSenha.Multiline = true;
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(216, 28);
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.Size = new System.Drawing.Size(216, 27);
             this.txtSenha.TabIndex = 21;
             this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
@@ -138,12 +140,12 @@
             this.txtNomeUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNomeUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(231)))), ((int)(((byte)(233)))));
             this.txtNomeUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNomeUsuario.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNomeUsuario.Font = new System.Drawing.Font("MS UI Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtNomeUsuario.Location = new System.Drawing.Point(49, 94);
-            this.txtNomeUsuario.Multiline = true;
             this.txtNomeUsuario.Name = "txtNomeUsuario";
-            this.txtNomeUsuario.Size = new System.Drawing.Size(216, 28);
+            this.txtNomeUsuario.Size = new System.Drawing.Size(216, 27);
             this.txtNomeUsuario.TabIndex = 19;
+            this.txtNomeUsuario.TextChanged += new System.EventHandler(this.txtNomeUsuario_TextChanged);
             // 
             // nomeUsuario
             // 
@@ -186,7 +188,7 @@
             this.guna2ControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.SeaGreen;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(285, -1);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(283, 1);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 33;
@@ -222,6 +224,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TOP SEGUROS BRASIL";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

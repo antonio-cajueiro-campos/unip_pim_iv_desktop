@@ -16,6 +16,9 @@ namespace Login_e_Registro_Sistema
     public partial class frmClientList : Form
     {
         public readonly IUserServices _userServices;
+
+        public ClienteOutput _clientInfos;
+
         public frmClientList(IUserServices userServices)
         {
             _userServices = userServices;
@@ -24,12 +27,14 @@ namespace Login_e_Registro_Sistema
 
         private async void UpdateClienteList()
         {
-            var teste = await _userServices.GetAllClients();
+            var clientResponse = await _userServices.GetAllClients();
+            _clientInfos = clientResponse.Data;
+
             var listDataView = new List<ClienteView>();
 
-            if (teste.Error == false)
+            if (clientResponse.Error == false)
             {
-                foreach (var cliente in teste.Data.Clientes)
+                foreach (var cliente in _clientInfos.Clientes)
                 {
                     listDataView.Add(
                         new()
@@ -59,8 +64,7 @@ namespace Login_e_Registro_Sistema
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmApolice Apolice = new frmApolice();
-            Apolice.Show();
+
         }
 
         private void frmClientList_Load(object sender, EventArgs e)
@@ -78,12 +82,32 @@ namespace Login_e_Registro_Sistema
              UpdateClienteList();
         }
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private async void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
+
             if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
-                MessageBox.Show(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+                MessageBox.Show(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+
+                var userId = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+                var apoliceResponse = await _userServices.GetApoliceById(userId);
+                // chamar o form de infos, dai eu passo o _clientInfos, e o apolice
+
+                var apolice = apoliceResponse.Data;
+
+                var currentClient = _clientInfos.Clientes.FirstOrDefault(c => c.Id == Convert.ToInt32(userId));
+
+                var formApolice = new frmApolice(_userServices, apolice, currentClient);
+
+                formApolice.Show();
+
             }
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+          
         }
     }
 }

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "unip_pim_iv_desktop", "unip_pim_iv_desktop.csproj", "{6C075322-9A60-4A86-849E-23D93B5FC3EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C075322-9A60-4A86-849E-23D93B5FC3EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C075322-9A60-4A86-849E-23D93B5FC3EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C075322-9A60-4A86-849E-23D93B5FC3EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C075322-9A60-4A86-849E-23D93B5FC3EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F43B41C-0190-4235-B273-FB3DDBFD1ED9}
+	EndGlobalSection
+EndGlobal
